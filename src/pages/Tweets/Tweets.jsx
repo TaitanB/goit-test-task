@@ -1,5 +1,5 @@
 import UserList from "../../components/UsersList/UsersList";
-import Selected from "../../components/Selected/Selected";
+// import Selected from "../../components/Selected/Selected";
 import { NavLink } from "react-router-dom";
 
 export default function Tweets() {
