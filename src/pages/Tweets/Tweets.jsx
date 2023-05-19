@@ -9,7 +9,7 @@ export default function Tweets() {
   return (
     <div className={css.tweetsContainer}>
       <NavLink to="/" className={css.goBack}>
-        <MdOutlineDoubleArrow className={css.iconBack} />
+        <MdOutlineDoubleArrow className={css.iconBack} size={30} />
       </NavLink>
       <UserList />
     </div>

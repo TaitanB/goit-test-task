@@ -7,7 +7,11 @@ import cssC from "../../components/UserCard/UserCard.module.css";
 export default function Home() {
   return (
     <div className={css.homeContainer}>
-      <h1 className={css.title}>Following Net</h1>
+      <div>
+        <h1 className={css.title}>Following Net</h1>
+        <img src={picture} alt="picture" className={cssC.picture} />
+      </div>
+
       <div className={cssC.userCard} style={{ transform: "rotate(10deg)" }}>
         <div className={cssC.imgContainer}>
           <img src={`${logo}`} alt="logo" className={cssC.logo} />

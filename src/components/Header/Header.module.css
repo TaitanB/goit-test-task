@@ -7,6 +7,9 @@
     #5736a3 54.28%,
     #4b2a99 78.99%
   );
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .header::after {
@@ -23,13 +26,15 @@
 
 .nav {
   display: flex;
-  margin-left: 50px;
   gap: 50px;
+  padding: 20px;
 }
 
 .navLink {
-  padding: 20px;
+  font-weight: 600;
+  padding: 10px;
   color: #ebd8ff;
+  border-radius: 10px;
 }
 
 .navLink:hover,
@@ -38,6 +43,25 @@
   scale: 1.2;
 }
 
-.active {
-  color: #5cd3a8;
+.img {
+  height: 60px;
+  border-radius: 20px;
+  filter: drop-shadow(0 0 2em #5cd3a8);
+}
+
+.img:hover,
+.img:focus {
+  animation: rotate infinite 1s linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

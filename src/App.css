@@ -2,3 +2,7 @@
   width: 100%;
   margin: 0 auto;
 }
+
+.active {
+  box-shadow: inset 0 0 20px 5px #5cd3a895;
+}

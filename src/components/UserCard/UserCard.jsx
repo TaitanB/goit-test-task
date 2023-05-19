@@ -6,7 +6,6 @@ import picture from "../../assets/picture.png";
 import css from "./UserCard.module.css";
 
 export default function UserCard(user) {
-  console.log(user);
   const [selection, setSelection] = useState(user.user.followed);
   const [followersCount, setFollowersCount] = useState(user.user.followers);
 
@@ -42,7 +41,6 @@ export default function UserCard(user) {
         </div>
       </div>
       <div className={css.userInfo}>
-        {/* <h2 className={css.userName}>{user.user.user}</h2> */}
         <p className={css.userTweets}>{user.user.tweets} tweets</p>
         <p className={css.userFollowers}>
           {followersCount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}

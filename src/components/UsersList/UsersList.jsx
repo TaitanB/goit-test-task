@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ScrollToTop from "react-scroll-up";
 import { MdOutlineDoubleArrow } from "react-icons/md";
 
 import { fetchUsers } from "../../api";
@@ -6,8 +7,9 @@ import { fetchUsers } from "../../api";
 import UserCard from "../UserCard/UserCard";
 import Selected from "../Selected/Selected";
 import LoadMore from "../LoadMore/LoadMore";
-
+import picture from "../../assets/picture.png";
 import css from "./usersList.module.css";
+import cssC from "../../components/UserCard/UserCard.module.css";
 
 export default function UsersList() {
   const [showLoadMoreBtn, setShowLoadMoreBtn] = useState(false);
@@ -29,7 +31,7 @@ export default function UsersList() {
           setUsers([...users, ...data]);
         });
       } catch (error) {
-        console.error(error);
+        alert(error);
       }
     };
 
@@ -52,16 +54,30 @@ export default function UsersList() {
         setUsers={setUsers}
       />
       <ul className={css.usersList}>
-        {users &&
-          users.length > 0 &&
-          users.map((user) => <UserCard key={user.id} user={user} />)}
+        {users && users.length > 0 ? (
+          users.map((user) => <UserCard key={user.id} user={user} />)
+        ) : (
+          <div className={css.textContainer}>
+            <p className={css.text}>You are not following anyone yet...</p>
+            <img src={picture} alt="picture" className={cssC.picture} />
+          </div>
+        )}
       </ul>
       {showLoadMoreBtn && <LoadMore handleLoadMore={handleLoadMore} />}
-      {users.length > limit && (
-        <a href="#Header" className={css.upBtn}>
-          <MdOutlineDoubleArrow className={css.iconUp} />
-        </a>
-      )}
+      <ScrollToTop
+        showUnder={160}
+        style={{
+          position: "fixed",
+          bottom: 60,
+          right: 60,
+          cursor: "pointer",
+          transitionDuration: "300ms",
+          transitionTimingFunction: "linear",
+          transitionDelay: "0s",
+        }}
+      >
+        <MdOutlineDoubleArrow className={css.iconUp} size={30} />
+      </ScrollToTop>
     </>
   );
 }

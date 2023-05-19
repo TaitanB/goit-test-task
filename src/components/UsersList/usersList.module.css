@@ -11,24 +11,29 @@
   margin-bottom: 30px;
 }
 
-.upBtn {
-  position: absolute;
-  bottom: 60px;
-  right: 60px;
-  border-radius: 50%;
-  padding: 5px;
-}
-
-.upBtn:hover,
-.upBtn:focus {
-  scale: 1.2;
-  box-shadow: inset 0 0 20px 20px #ae7be3;
-}
-
 .iconUp {
   display: block;
   transform: rotate(-90deg);
   color: #471ca9;
-  width: 30px;
-  height: 30px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.iconUp:hover,
+.iconUp:focus {
+  scale: 1.2;
+  box-shadow: inset 0 0 20px 20px #ae7be3;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-weight: 600;
+  font-size: 36px;
+  color: #471ca9;
 }

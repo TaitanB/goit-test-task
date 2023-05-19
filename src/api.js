@@ -15,7 +15,7 @@ export const fetchUsers = async (page, limit, selected) => {
       return data;
     });
   } catch (error) {
-    console.error(error);
+    alert(error);
   }
 };
 
@@ -25,6 +25,6 @@ export const updateUsers = async (id, userData) => {
       return data;
     });
   } catch (error) {
-    console.error(error);
+    alert(error);
   }
 };
