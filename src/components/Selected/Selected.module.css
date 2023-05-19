@@ -1,0 +1,15 @@
+.selectedLabel {
+  display: flex;
+  margin-left: 100px;
+  color: #5736a3;
+  font-weight: 700;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.selected {
+  margin-left: 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: #ebd8ff;
+}

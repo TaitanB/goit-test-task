@@ -1,0 +1,11 @@
+.homeContainer {
+  display: flex;
+  margin: 150px auto;
+  gap: 150px;
+  align-items: center;
+}
+
+.title {
+  font-size: 56px;
+  color: #ebd8ff;
+}

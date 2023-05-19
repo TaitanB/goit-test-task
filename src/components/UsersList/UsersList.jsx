@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
-import css from "./usersList.module.css";
-import UserCard from "../UserCard/UserCard";
+import { MdOutlineDoubleArrow } from "react-icons/md";
+
 import { fetchUsers } from "../../api";
+
+import UserCard from "../UserCard/UserCard";
 import Selected from "../Selected/Selected";
+import LoadMore from "../LoadMore/LoadMore";
+
+import css from "./usersList.module.css";
 
 export default function UsersList() {
   const [showLoadMoreBtn, setShowLoadMoreBtn] = useState(false);
@@ -15,8 +20,6 @@ export default function UsersList() {
     const getUsers = async ({ page, limit, selected }) => {
       try {
         return await fetchUsers(page, limit, selected).then((data) => {
-          console.log(`data.length =>`);
-          console.log(data.length);
           if (data && data.length < limit) {
             setShowLoadMoreBtn(false);
           } else {
@@ -24,8 +27,6 @@ export default function UsersList() {
           }
 
           setUsers([...users, ...data]);
-          console.log(`setUsers =>`);
-          console.log(users);
         });
       } catch (error) {
         console.error(error);
@@ -33,8 +34,6 @@ export default function UsersList() {
     };
 
     getUsers({ page: pageNumber, limit: limit, selected: followCheck });
-    console.log(`getUsers =>`);
-    console.log(users);
   }, [pageNumber, followCheck]);
 
   const handleLoadMore = () => {
@@ -57,12 +56,12 @@ export default function UsersList() {
           users.length > 0 &&
           users.map((user) => <UserCard key={user.id} user={user} />)}
       </ul>
-      {showLoadMoreBtn && (
-        <button type="button" onClick={handleLoadMore}>
-          Load more
-        </button>
+      {showLoadMoreBtn && <LoadMore handleLoadMore={handleLoadMore} />}
+      {users.length > limit && (
+        <a href="#Header" className={css.upBtn}>
+          <MdOutlineDoubleArrow className={css.iconUp} />
+        </a>
       )}
-      {users.length > limit && <a href="#Header">Up</a>}
     </>
   );
 }

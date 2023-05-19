@@ -1,13 +1,17 @@
-import UserList from "../../components/UsersList/UsersList";
-// import Selected from "../../components/Selected/Selected";
 import { NavLink } from "react-router-dom";
+import { MdOutlineDoubleArrow } from "react-icons/md";
+
+import UserList from "../../components/UsersList/UsersList";
+
+import css from "./Tweets.module.css";
 
 export default function Tweets() {
   return (
-    <>
-      <NavLink to="/">Go back</NavLink>
-      {/* <Selected /> */}
+    <div className={css.tweetsContainer}>
+      <NavLink to="/" className={css.goBack}>
+        <MdOutlineDoubleArrow className={css.iconBack} />
+      </NavLink>
       <UserList />
-    </>
+    </div>
   );
 }

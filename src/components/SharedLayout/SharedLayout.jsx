@@ -1,19 +1,17 @@
 import { Header } from "../../components/Header/Header";
 import React, { Suspense } from "react";
 import { Outlet } from "react-router";
-import picture from "../../assets/picture.png";
+import Loader from "../Loader/Loader";
 import css from "./SharedLayout.module.css";
 
 const SharedLayout = () => {
   return (
-    <>
+    <div className={css.container}>
       <Header />
-      <Suspense
-        fallback={<img src={picture} alt="Loading..." className={css.loader} />}
-      >
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
-    </>
+    </div>
   );
 };
 

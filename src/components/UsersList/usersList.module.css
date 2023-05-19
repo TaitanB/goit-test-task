@@ -4,135 +4,31 @@
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 30px;
   padding: 30px;
-  background: #e4dff0;
+  background: #ebd8ff;
   justify-items: center;
   margin: 0 auto;
-}
-
-.userCard {
-  width: 380px;
-  height: 460px;
-  background: linear-gradient(
-    114.99deg,
-    #471ca9 -0.99%,
-    #5736a3 54.28%,
-    #4b2a99 78.99%
-  );
-  box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
-  will-change: filter;
-  transition: filter 300ms;
+  margin-bottom: 30px;
 }
 
-.userCard:hover .picture {
-  filter: drop-shadow(0 0 2em #646cffaa);
-  animation: rotate infinite 1s linear;
-}
-
-.imgContainer {
-  /* background-image: url(../assets/picture.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat; */
-  height: 214px;
-  border-bottom: 4.39px solid #ebd8ff;
-  position: relative;
-}
-
-.logo {
+.upBtn {
   position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.picture {
-  margin: 28px 36px 16px;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.userAvatar {
-  width: 72px;
-  height: 72px;
+  bottom: 60px;
+  right: 60px;
   border-radius: 50%;
-  border: 4.39px solid #ebd8ff;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  background: #ebd8ff;
-  text-align: center;
-  /* box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06),
-    inset 0px -2.19582px 4.39163px #ae7be3,
-    inset 0px 4.39163px 3.29372px #fbf8ff; */
+  padding: 5px;
 }
 
-.userInfo {
-  /* width: 100%; */
-  display: flex;
-  flex-direction: column;
-  padding: 62px 16px 36px;
-  align-items: center;
+.upBtn:hover,
+.upBtn:focus {
+  scale: 1.2;
+  box-shadow: inset 0 0 20px 20px #ae7be3;
 }
 
-.userName {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  color: #ebd8ff;
-  margin-bottom: 16px;
-}
-.userTweets {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  color: #ebd8ff;
-  margin-bottom: 16px;
-}
-
-.userFollowers {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  color: #ebd8ff;
-  margin-bottom: 26px;
-}
-
-.userToggleFollow {
-  width: 196px;
-  background-color: #ebd8ff;
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-  border-radius: 10.3108px;
-  padding: 14px 28px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  color: #373737;
-}
-
-.userToggleFollow:hover {
-  box-shadow: inset 0 0 30px 10px #646cffaa;
-  scale: 1.1;
+.iconUp {
+  display: block;
+  transform: rotate(-90deg);
+  color: #471ca9;
+  width: 30px;
+  height: 30px;
 }

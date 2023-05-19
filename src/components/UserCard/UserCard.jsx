@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
-import css from "../UsersList/usersList.module.css";
+import { updateUsers } from "../../api";
 import logo from "../../assets/logo.png";
 import picture from "../../assets/picture.png";
-import { updateUsers } from "../../api";
+import css from "./UserCard.module.css";
 
 export default function UserCard(user) {
-  //   console.log(user);
-  //   const { id, user, avatar, followed, tweets, followers } = user.user;
+  console.log(user);
   const [selection, setSelection] = useState(user.user.followed);
   const [followersCount, setFollowersCount] = useState(user.user.followers);
 
@@ -19,7 +18,6 @@ export default function UserCard(user) {
         followers: followersCount - 1,
       });
       setFollowersCount(followersCount - 1);
-      //   console.log(followersCount);
     }
     if (!selection) {
       updateUsers(user.user.id, {
@@ -27,7 +25,6 @@ export default function UserCard(user) {
         followers: followersCount + 1,
       });
       setFollowersCount(followersCount + 1);
-      //   console.log(followersCount);
     }
   };
 
@@ -36,11 +33,13 @@ export default function UserCard(user) {
       <div className={css.imgContainer}>
         <img src={`${logo}`} alt="logo" className={css.logo} />
         <img src={`${picture}`} alt="picture" className={css.picture} />
-        <img
-          className={css.userAvatar}
-          src={user.user.avatar}
-          alt="user photo"
-        />
+        <div className={css.userAvatarContainer}>
+          <img
+            className={css.userAvatar}
+            src={user.user.avatar}
+            alt="user photo"
+          />
+        </div>
       </div>
       <div className={css.userInfo}>
         {/* <h2 className={css.userName}>{user.user.user}</h2> */}

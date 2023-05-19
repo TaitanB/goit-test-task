@@ -1,0 +1,29 @@
+.tweetsContainer {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.goBack {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.goBack:hover,
+.goBack:focus {
+  scale: 1.2;
+  box-shadow: inset 0 0 20px 20px #ae7be3;
+}
+
+.iconBack {
+  display: block;
+  transform: scaleX(-1);
+  color: #471ca9;
+  width: 30px;
+  height: 30px;
+}
