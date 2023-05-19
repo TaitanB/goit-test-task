@@ -4,7 +4,7 @@
 
 <b>Мета</b>: створити картки твітів та додати інтерактивності при клікові на кнопку.
 
-![userCerd](src/assets/Screenshot-1.png)
+![userCard](src/assets/Screenshot-1.png)
 
 Загальний вигляд картки у двох станах - *Follow та Following*
 
@@ -43,7 +43,7 @@
   <li>Решта вимог аналогічні до вищеописаного технічного завдання.</li>
 </ol>
 
-![userCerd](src/assets/Screenshot-2.png)
+![userInfo](src/assets/Screenshot-2.png)
 
 Макет: https://www.figma.com/file/zun1oP6NmS2Lmgbcj6e1IG/Test?node-id=0%3A1&t=VoiYTfiXggVItgVd-1
 
