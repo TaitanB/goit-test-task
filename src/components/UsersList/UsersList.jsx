@@ -58,7 +58,7 @@ export default function UsersList() {
           users.map((user) => <UserCard key={user.id} user={user} />)
         ) : (
           <div className={css.textContainer}>
-            <p className={css.text}>You are not following anyone yet...</p>
+            <p className={css.text}>There is nothing here...</p>
             <img src={picture} alt="picture" className={cssC.picture} />
           </div>
         )}
@@ -68,7 +68,7 @@ export default function UsersList() {
         showUnder={160}
         style={{
           position: "fixed",
-          bottom: 60,
+          bottom: 30,
           right: 60,
           cursor: "pointer",
           transitionDuration: "300ms",

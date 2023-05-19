@@ -1,15 +1,22 @@
 .selectedLabel {
   display: flex;
-  margin-left: 100px;
   color: #5736a3;
   font-weight: 700;
+  font-size: 18px;
   margin-bottom: 30px;
   align-items: center;
 }
 
 .selected {
+  font-size: 18px;
+  font-weight: 600;
   margin-left: 10px;
-  border-radius: 5px;
-  padding: 5px 10px;
+  border-radius: 10px;
+  padding: 10px;
   background: #ebd8ff;
+  color: #5736a3;
+}
+
+.selected > option {
+  font-weight: 600;
 }

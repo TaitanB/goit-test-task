@@ -1,6 +1,7 @@
 import logo from "../../assets/logo.png";
 import picture from "../../assets/picture.png";
 import hansel from "../../assets/hansel.png";
+
 import css from "./Home.module.css";
 import cssC from "../../components/UserCard/UserCard.module.css";
 

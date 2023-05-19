@@ -9,7 +9,6 @@ export const Header = () => {
       <Link to="/">
         <img src={pictureLogo} alt="pictureLogo" className={css.img} />
       </Link>
-
       <div className={css.nav}>
         <NavLink to="/" className={css.navLink}>
           Home

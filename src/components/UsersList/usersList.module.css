@@ -1,13 +1,11 @@
 .usersList {
-  max-width: 1280px;
+  max-width: 1200px;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 30px;
-  padding: 30px;
-  background: #ebd8ff;
   justify-items: center;
   margin: 0 auto;
-  border-radius: 20px;
   margin-bottom: 30px;
 }
 
@@ -17,6 +15,7 @@
   color: #471ca9;
   border-radius: 50%;
   padding: 5px;
+  transition: box-shadow 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .iconUp:hover,
@@ -30,10 +29,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  margin-top: 100px;
 }
 
 .text {
   font-weight: 600;
   font-size: 36px;
-  color: #471ca9;
+  color: #ebd8ff;
+  text-shadow: 2px 2px 4px #646cffaa;
+  text-align: center;
 }

@@ -1,8 +1,9 @@
 .homeContainer {
   display: flex;
+  flex-wrap: wrap;
   margin: 150px auto;
-  gap: 150px;
-  align-items: center;
+  gap: 100px;
+  justify-content: center;
 }
 
 .title {
